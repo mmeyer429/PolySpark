@@ -75,17 +75,9 @@
             <ul class='unstyled field-list'>
               <li>
                 <paper-input label="Access Token" floatingLabel></paper-input>
-                <!-- <core-field>
-                  <label>Access Token:</label>
-                  <input placeholder="10438VON90C8NRFO1IQKSMCFR56789OLMGT5RDVBNJ7TFGYO" flex>
-                </core-field> -->
               </li>
               <li>
                 <paper-input label="Device Id" floatingLabel></paper-input>
-                <!-- <core-field>
-                  <label>Device Id:</label>
-                  <input placeholder="1234567890" flex>
-                </core-field> -->
               </li>
             </ul>
 
@@ -100,6 +92,20 @@
   <!-- build:js scripts/app.js -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="scripts/app.js"></script>
+  <script type="text/javascript">
+    function callJsRemote (led, status) {
+      // call Remote Function to turn on the led
+      /*
+        example
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.AccountRemoter.getAccount}',
+            led, 
+            status,
+            function(result, event) {}
+        );
+      */
+    }
+  </script>
   <!-- endbuild-->
 </body>
 
