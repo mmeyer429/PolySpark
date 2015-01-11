@@ -14,6 +14,16 @@
       button.attr('icon', button.attr('icon') == 'settings' ? 'arrow-back' : 'settings');
 
     });
+
+    $('paper-toggle-button').on('change', function () {
+
+      var led = this.id,
+          status = this.checked;
+
+      console.log('led:',led,'status:',status);
+
+      callJsRemote(led, status);
+    })
   });
 
 // wrap document so it plays nice with other libraries
