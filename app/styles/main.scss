@@ -1,12 +1,21 @@
+$background-dark: #01344e;
+$background-general: #ddd;
+$background-light: #fafafa;
+$font-color-dark: #333;
+$font-color-light: #fafafa;
+$success: #1DAE1F;
+$higlight: #4285f4;
+
+
 body {
-  background: #ddd;
+  background: $background-general;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: $font-color-dark;
 }
 
 core-toolbar {
-  background: #01344e;
-  color: #fafafa;
+  background: $background-dark;
+  color: $font-color-light;
 }
 
 .card {
@@ -15,7 +24,7 @@ core-toolbar {
   width: 90%;
 
   paper-shadow {
-    background: #fafafa;
+    background: $background-light;
   }
 
   .card-container {
@@ -62,24 +71,24 @@ ul {
 
 paper-button {
   &.success {
-    background: #1DAE1F;
-    color: #fafafa;
+    background: $success;
+    color: $font-color-light;
   }
 }
 
 // To change the ink color for checked state
 paper-toggle-button::shadow paper-radio-button::shadow #ink[checked] {
-  color: #4285f4;
+  color: $higlight;
 }
 // To change the radio checked color:
 
 paper-toggle-button::shadow paper-radio-button::shadow #onRadio {
-  background-color: #4285f4;
+  background-color: $higlight;
 }
 // To change the bar color for checked state:
 
 paper-toggle-button::shadow #toggleBar[checked] {
-  background-color: #4285f4;
+  background-color: $higlight;
 }
 
 
