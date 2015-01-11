@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>personal_workspace</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:vulcanized elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <!-- endbuild-->
+</head>
+
+<body fullbleed layout vertical>
+
+  <core-header-panel flex>
+    <core-toolbar>
+      <div flex>Control the Leds </div>
+      <paper-icon-button icon="settings" id="settings-button"></paper-icon-button>
+    </core-toolbar>
+
+    <core-animated-pages transitions="cross-fade-all">
+      <section class="card">
+        <paper-shadow z="1">
+          <div class="card-container">
+            <h1 class="text-center">
+              Turn On Leds
+            </h1>
+
+
+            <ul class='unstyled list'>
+              <li>
+                <core-label>
+                  Led 1
+                  <paper-toggle-button id="led1" for></paper-toggle-button>
+                </core-label>
+              </li>
+              <li>
+                <core-label>
+                  Led 2
+                  <paper-toggle-button id="led2" for></paper-toggle-button>
+                </core-label>
+              </li>
+              <li>
+                <core-label>
+                  Led 3
+                  <paper-toggle-button id="led3" for></paper-toggle-button>
+                </core-label>
+              </li>
+            </ul>
+
+          </div>
+        </paper-shadow>
+      </section>
+      
+      <section class="card">
+        <paper-shadow z="1">
+          <div class="card-container clearfix">
+            
+            <h1 class="text-center">
+              Settings
+            </h1>
+
+            <ul class='unstyled field-list'>
+              <li>
+                <paper-input label="Access Token" floatingLabel></paper-input>
+                <!-- <core-field>
+                  <label>Access Token:</label>
+                  <input placeholder="10438VON90C8NRFO1IQKSMCFR56789OLMGT5RDVBNJ7TFGYO" flex>
+                </core-field> -->
+              </li>
+              <li>
+                <paper-input label="Device Id" floatingLabel></paper-input>
+                <!-- <core-field>
+                  <label>Device Id:</label>
+                  <input placeholder="1234567890" flex>
+                </core-field> -->
+              </li>
+            </ul>
+
+            <paper-button raised class="pull-right success">Save</paper-button>
+
+          </div>
+        </paper-shadow>
+      </section>
+    </core-animated-pages>
+
+  </core-header-panel>
+  <!-- build:js scripts/app.js -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <!-- endbuild-->
+</body>
+
+</html>

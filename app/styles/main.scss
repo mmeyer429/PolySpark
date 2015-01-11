@@ -1,0 +1,103 @@
+body {
+  background: #ddd;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+core-toolbar {
+  background: #01344e;
+  color: #fafafa;
+}
+
+.card {
+  margin:auto;
+  margin-top: 30px;
+  width: 90%;
+
+  paper-shadow {
+    background: #fafafa;
+  }
+
+  .card-container {
+    padding: 20px 24px;
+  }
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+ul {
+  &.unstyled {
+    list-style: none;
+    padding: 0;
+  }
+
+  &.list {
+    margin-bottom: 20px;
+    li {
+      padding: 16px 14px;
+    }
+  }
+
+  &.field-list {
+    li {
+      padding: 0 14px;
+    }
+  }
+
+  &.list, &.field-list {
+    li {
+      core-label paper-toggle-button {
+        float: right;
+      }
+
+      paper-input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+paper-button {
+  &.success {
+    background: #1DAE1F;
+    color: #fafafa;
+  }
+}
+
+// To change the ink color for checked state
+paper-toggle-button::shadow paper-radio-button::shadow #ink[checked] {
+  color: #4285f4;
+}
+// To change the radio checked color:
+
+paper-toggle-button::shadow paper-radio-button::shadow #onRadio {
+  background-color: #4285f4;
+}
+// To change the bar color for checked state:
+
+paper-toggle-button::shadow #toggleBar[checked] {
+  background-color: #4285f4;
+}
+
+
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
